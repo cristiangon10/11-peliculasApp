@@ -1,0 +1,29 @@
+#jumbo{
+    background: linear-gradient(to right top, #10f9bd, #00faa9, #00fb92, #00fb77, #28fb56);
+}
+
+#titulo{
+    font-family: sans-serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 80px;
+    color: black;
+    text-shadow: 0px 0px 25px white;
+}
+
+#contenido{
+    font-family: sans-serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    text-shadow: 0px 0px 25px white  ;
+}
+
+h3{
+    color:white;
+}
+
+p{
+    color:white;
+}

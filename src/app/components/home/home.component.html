@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div class="jumbotron img-fluid" id="jumbo">
+        <h3 class="display-5" id="titulo">Bienvenidos a peliculasApp</h3>
+        <p class="lead" id="contenido">En esta app encontraras la informacion relacionada con el mundo del septimo
+            arte!</p>
+        <hr class="my-4">
+        <p id="contenido">Porque nos gustan las peliculas tanto como a ti... </p>
+        <p id="contenido">¡Por eso este lugar es para ti!</p>
+    </div>
+
+    <div class="container">
+        <app-galeria [peliculas]="cartelera | slice:0:6" titulo="Peliculas en cartelera"></app-galeria>
+
+        <hr>
+
+        <app-galeria [peliculas]="populares | slice:0:6" titulo="Peliculas populares"></app-galeria>
+
+        <hr>
+
+        <app-galeria [peliculas]="infantiles | slice:0:6" titulo="Peliculas infantiles"></app-galeria>
+    </div>
+</div>

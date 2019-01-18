@@ -1,0 +1,39 @@
+<app-loading *ngIf="loading"></app-loading>
+
+<div class="container main-container" >
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label>Buscar:</label>
+        <input type="text" name="buscar" class="form-control" placeholder="Ingresa el nombre de una pelicula"
+          (keyup.enter)="buscarPelicula()" [(ngModel)]="buscar">
+      </div>
+    </div>
+  </div>
+
+  <div class="row animated fadeIn">
+    <div class="card-columns">
+
+      <div class="card" *ngFor="let pelicula of _ps.peliculas">
+        <img [src]="pelicula | peliculaImagen" class="card-img-top" [alt]="pelicula.original_title">
+        <div class="card-body">
+          <h4 class="card-title">{{pelicula.original_title}}</h4>
+          <hr>
+          <p class="card-text">{{pelicula.overview | slice:0:200}}...</p>
+          <hr>
+          <span class="badge badge-primary">Lanzamiento: {{pelicula.release_date}}</span><br>
+          <span class="badge badge-warning">Popularidad: {{pelicula.popularity}}</span><br>
+          <span class="badge badge-danger">Idioma Original: {{pelicula.original_language}}</span><br>
+          <span class="badge badge-success">Calificacion(/10): {{pelicula.vote_average}}</span><br>
+          <span class="badge badge-success">Total de Votos: {{pelicula.vote_count}}</span>
+          
+          <hr>
+          <button type="button" class="btn btn-outline-primary btn-block" [routerLink]="['/pelicula', pelicula.id, 'buscar']">
+            Leer más...
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
